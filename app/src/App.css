@@ -9,8 +9,10 @@
 .site-header {
   position: sticky;
   top: 0;
+  background: #262626;
   backdrop-filter: saturate(180%) blur(8px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 .nav {
   display: flex;
@@ -98,14 +100,74 @@
   background: #1f1f1f; /* slightly lighter */
 }
 
-/* Content sections */
-.content-section {
-  display: grid;
-  gap: 1rem;
-  max-width: 70ch;
+/* Hero Section - Paper Abstract Layout */
+.hero-section {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
+
+.hero-content {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 300;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.hero-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+}
+
+.hero-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #646cff;
+  transition: opacity 0.2s;
+}
+
+.hero-link:hover {
+  opacity: 0.8;
+}
+
+/* Content sections - Paper Abstract Typography */
 .content-section h1 {
-  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 3rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.content-section h2:first-child {
+  margin-top: 0;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.9;
+}
+
+.content-section p:last-child {
+  margin-bottom: 0;
 }
 
 @media (prefers-color-scheme: dark) {
