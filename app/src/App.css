@@ -1,42 +1,115 @@
-#root {
-  max-width: 1280px;
+/* Site layout */
+.container {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0 1.25rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Navbar */
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.brand img {
+  height: 28px;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+.nav-link {
+  padding: .25rem .5rem;
+}
+.nav-link.active {
+  font-weight: 700;
+  color: #646cff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Hero */
+.hero {
+  padding: 4rem 0 2rem;
+}
+.hero-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.25rem, 6vw, 3.25rem);
+}
+.hero-text {
+  margin-top: 1rem;
+  max-width: 65ch;
+  font-size: 1.075rem;
+  opacity: .92;
+}
+.hero-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: .8em 1.2em;
+  font-weight: 600;
+}
+.btn.secondary {
+  background: transparent;
+  border-color: currentColor;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  background: #121212;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+/* Banded sections */
+.band {
+  width: 100%;
+  padding: 4rem 0 3rem;
+  background: #202020; /* default dark gray */
+}
+.band.alt {
+  background: #1f1f1f; /* slightly lighter */
+}
+
+/* Content sections */
+.content-section {
+  display: grid;
+  gap: 1rem;
+  max-width: 70ch;
+}
+.content-section h1 {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .band.alt {
+    background: #1f1f1f;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
