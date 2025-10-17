@@ -170,6 +170,47 @@
   margin-bottom: 0;
 }
 
+/* Bio Card */
+.bio-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #1f1f1f;
+  border: 1px solid rgba(255,255,255,0.06);
+  align-items: start;
+}
+.bio-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #121212;
+  display: grid;
+  place-items: center;
+}
+.bio-avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.bio-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.bio-role {
+  margin: .125rem 0 .75rem 0;
+  opacity: .8;
+}
+.bio-text {
+  margin: 0 0 .75rem 0;
+}
+.bio-links a {
+  color: #8fa8ff;
+}
+
 @media (prefers-color-scheme: dark) {
   .band.alt {
     background: #1f1f1f;
