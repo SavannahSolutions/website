@@ -6,6 +6,6 @@ import react from '@vitejs/plugin-react'
 // set base to '/website/'. If you publish at a custom domain or user root,
 // change this to '/'.
 export default defineConfig({
-  base: '/website/',
+  base: '/',
   plugins: [react()],
 })
