@@ -5,7 +5,7 @@ function Navbar() {
     <header className="site-header">
       <div className="container nav">
         <Link to="/" className="brand">
-          <img src="/Karoo Dark Short.svg" alt="Karoo logo" />
+          <img src={`${import.meta.env.BASE_URL}Karoo Dark Short.svg`} alt="Karoo logo" />
         </Link>
         <div className="nav-links">
           <NavLink to="/" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Home</NavLink>

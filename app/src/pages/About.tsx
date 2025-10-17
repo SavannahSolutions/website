@@ -9,7 +9,7 @@ function About() {
 
         <div className="bio-card">
           <div className="bio-avatar">
-            <img src="/Kaleb_square.jpg" alt="Profile avatar" />
+            <img src={`${import.meta.env.BASE_URL}Kaleb_square.jpg`} alt="Profile avatar" />
           </div>
           <div className="bio-main">
             <h2 className="bio-name">Kaleb Bruwer</h2>
