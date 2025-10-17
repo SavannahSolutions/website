@@ -189,11 +189,14 @@
   background: #121212;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 .bio-avatar img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  line-height: 200px; /* center alt text vertically when image fails */
+  text-align: center; /* ensure alt text centers horizontally as well */
 }
 .bio-name {
   margin: 0;
