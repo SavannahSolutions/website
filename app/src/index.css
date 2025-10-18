@@ -7,6 +7,11 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  /* Hex grid variables */
+  --fill-colour: #222; /* fill colour */
+  --line-colour: #333;  /* line colour */
+  --size: 20px;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +31,16 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  /* Subtle hex pattern derived from layered radial/linear gradients (no images) */
+  background:
+    radial-gradient(circle farthest-side at 0% 50%, var(--fill-colour) 23.5%, transparent 0) calc(var(--size) * 0.7) var(--size),
+    radial-gradient(circle farthest-side at 0% 50%, var(--line-colour) 24%, transparent 0) calc(var(--size) * 0.6129) var(--size),
+    linear-gradient(var(--fill-colour) 14%, transparent 0, transparent 85%, var(--fill-colour) 0) 0 0,
+    linear-gradient(150deg, var(--fill-colour) 24%, var(--line-colour) 0, var(--line-colour) 26%, transparent 0, transparent 74%, var(--line-colour) 0, var(--line-colour) 76%, var(--fill-colour) 0) 0 0,
+    linear-gradient(30deg, var(--fill-colour) 24%, var(--line-colour) 0, var(--line-colour) 26%, transparent 0, transparent 74%, var(--line-colour) 0, var(--line-colour) 76%, var(--fill-colour) 0) 0 0,
+    linear-gradient(90deg, var(--line-colour) 2%, var(--fill-colour) 0, var(--fill-colour) 98%, var(--line-colour) 0) 0 0 var(--fill-colour);
+  background-size: calc(var(--size) * 1.333) calc(var(--size) * 2);
+  background-attachment: fixed; /* elegant, subtle parallax-free texture */
 }
 
 h1 {
@@ -56,6 +71,7 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
+    --hex-line: rgba(0, 0, 0, 0.06);
   }
   a:hover {
     color: #747bff;

@@ -12,7 +12,7 @@ function About() {
             <img src={`${import.meta.env.BASE_URL}Kaleb_square.jpg`} alt="Profile avatar" />
           </div>
           <div className="bio-main">
-            <h2 className="bio-name">Kaleb Bruwer</h2>
+            <h2 className="bio-name">Kaleb Brimage.pnguwer</h2>
             <p className="bio-role">Founder</p>
             <p className="bio-text">
               I graduated from the University of Pretoria with a BScHons in Computer Science in 2022.
